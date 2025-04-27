@@ -1,5 +1,5 @@
 {
-  "remarks": "🇳🇱[Block🚫ads]",
+  "remarks": "🇨🇭[Block🚫ads]",
   "log": {
     "loglevel": "warning"
   },
@@ -64,8 +64,8 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.21.16.1",
-            "port": 80,
+            "address": "104.25.160.56",
+            "port": 443,
             "users": [
               {
                 "id": "c5e4ad3c-6452-480b-a513-14a03ced385b",
@@ -78,16 +78,36 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "none",
+        "security": "tls",
         "sockopt": {
-          "domainStrategy": "UseIPv4v6"
+          "dialerProxy": "fragment"
         },
         "wsSettings": {
           "host": "cool-shape-5b609-uebd-reigns.roman-xray-plus-mahdi-reigns-cdn-vip-android-pc-2024-dns-com.workers.dev",
-          "path": "/vxj0Jhon4zbRr0ig/MTUyLjcwLjU3LjE4Mg==?ed=2560"
+          "path": "/KrE65Sjyh77yjyCt/MTQwLjIzOC4yMTIuOTU=?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "Cool-ShApE-5B609-uEbD-rEigns.ROman-xRAy-pLuS-MahDi-rEigNs-CdN-viP-andrOiD-pc-2024-DnS-com.workers.dev"
         }
       },
       "tag": "proxy"
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "100-200",
+          "interval": "1-1"
+        },
+        "domainStrategy": "UseIPv4v6"
+      }
     },
     {
       "protocol": "dns",
