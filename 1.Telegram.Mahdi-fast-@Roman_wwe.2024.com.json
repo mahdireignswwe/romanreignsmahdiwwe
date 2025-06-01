@@ -70,6 +70,94 @@
   "outbounds": [
     {
       "tag": "proxy-1",
+      "protocol": "wireguard",
+      "noKernelTun": false,
+      "settings": {
+        "secretKey": "8M06FNJUimoqJ5xx2U5Sz7oAZEyzh58BPFh7ILd7YGM=",
+        "address": [
+          "172.16.0.2/32"
+        ],
+        "peers": [
+          {
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "allowedIPs": [
+              "0.0.0.0/0",
+              "::/0"
+            ],
+            "endpoint": "162.159.192.179:903"
+          }
+        ],
+        "mtu": 1280
+      }
+    },
+    {
+      "tag": "proxy-2",
+      "protocol": "wireguard",
+      "noKernelTun": false,
+      "settings": {
+        "secretKey": "FrcHYd0tN74p5Andx2aFHrIMkuSGwQb6EROeHLck1jo=",
+        "address": [
+          "172.16.0.2/32,2606:4700:110:80bd:2df9:84d3:96b5:e837/128"
+        ],
+        "peers": [
+          {
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "allowedIPs": [
+              "0.0.0.0/0",
+              "::/0"
+            ],
+            "endpoint": "162.159.192.170:7103"
+          }
+        ],
+        "mtu": 1280
+      }
+    },
+    {
+      "tag": "proxy-3",
+      "protocol": "wireguard",
+      "noKernelTun": false,
+      "settings": {
+        "secretKey": "kCNW0GkeJUUMBIgcjOMOvwUyW5CujNoQOVSKNLz0YUc=",
+        "address": [
+          "172.16.0.2/32"
+        ],
+        "peers": [
+          {
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "allowedIPs": [
+              "0.0.0.0/0",
+              "::/0"
+            ],
+            "endpoint": "162.159.192.170:7103"
+          }
+        ],
+        "mtu": 1280
+      }
+    },
+    {
+      "tag": "proxy-4",
+      "protocol": "wireguard",
+      "noKernelTun": false,
+      "settings": {
+        "secretKey": "UCHfhOvSLCQyW4zF6WnqpyrgMRXT0xRTRMsl5DvHQ2Q=",
+        "address": [
+          "172.16.0.2/32"
+        ],
+        "peers": [
+          {
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "allowedIPs": [
+              "0.0.0.0/0",
+              "::/0"
+            ],
+            "endpoint": "162.159.195.56:4233"
+          }
+        ],
+        "mtu": 1280
+      }
+    },
+    {
+      "tag": "proxy-5",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -94,7 +182,7 @@
       }
     },
     {
-      "tag": "proxy-2",
+      "tag": "proxy-6",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -119,7 +207,7 @@
       }
     },
     {
-      "tag": "proxy-3",
+      "tag": "proxy-7",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -176,7 +264,7 @@
       }
     },
     {
-      "tag": "proxy-4",
+      "tag": "proxy-8",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -205,7 +293,7 @@
       }
     },
     {
-      "tag": "proxy-5",
+      "tag": "proxy-9",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -241,7 +329,7 @@
       }
     },
     {
-      "tag": "proxy-6",
+      "tag": "proxy-10",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -266,7 +354,7 @@
       }
     },
     {
-      "tag": "proxy-7",
+      "tag": "proxy-11",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -296,7 +384,7 @@
       }
     },
     {
-      "tag": "proxy-8",
+      "tag": "proxy-12",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -326,7 +414,7 @@
       }
     },
     {
-      "tag": "proxy-9",
+      "tag": "proxy-13",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -355,7 +443,7 @@
       }
     },
     {
-      "tag": "proxy-10",
+      "tag": "proxy-14",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -384,7 +472,7 @@
       }
     },
     {
-      "tag": "proxy-11",
+      "tag": "proxy-15",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -409,7 +497,7 @@
       }
     },
     {
-      "tag": "proxy-12",
+      "tag": "proxy-16",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -445,7 +533,7 @@
       }
     },
     {
-      "tag": "proxy-13",
+      "tag": "proxy-17",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -470,7 +558,7 @@
       }
     },
     {
-      "tag": "proxy-14",
+      "tag": "proxy-18",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -500,7 +588,7 @@
       }
     },
     {
-      "tag": "proxy-15",
+      "tag": "proxy-19",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -536,7 +624,7 @@
       }
     },
     {
-      "tag": "proxy-16",
+      "tag": "proxy-20",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -593,7 +681,7 @@
       }
     },
     {
-      "tag": "proxy-17",
+      "tag": "proxy-21",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -629,7 +717,7 @@
       }
     },
     {
-      "tag": "proxy-18",
+      "tag": "proxy-22",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -665,7 +753,7 @@
       }
     },
     {
-      "tag": "proxy-19",
+      "tag": "proxy-23",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -690,7 +778,7 @@
       }
     },
     {
-      "tag": "proxy-20",
+      "tag": "proxy-24",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -726,7 +814,7 @@
       }
     },
     {
-      "tag": "proxy-21",
+      "tag": "proxy-25",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -762,7 +850,7 @@
       }
     },
     {
-      "tag": "proxy-22",
+      "tag": "proxy-26",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -791,7 +879,7 @@
       }
     },
     {
-      "tag": "proxy-23",
+      "tag": "proxy-27",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -820,7 +908,7 @@
       }
     },
     {
-      "tag": "proxy-24",
+      "tag": "proxy-28",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -850,7 +938,7 @@
       }
     },
     {
-      "tag": "proxy-25",
+      "tag": "proxy-29",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -886,7 +974,7 @@
       }
     },
     {
-      "tag": "proxy-26",
+      "tag": "proxy-30",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -911,7 +999,7 @@
       }
     },
     {
-      "tag": "proxy-27",
+      "tag": "proxy-31",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -947,7 +1035,7 @@
       }
     },
     {
-      "tag": "proxy-28",
+      "tag": "proxy-32",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -983,7 +1071,7 @@
       }
     },
     {
-      "tag": "proxy-29",
+      "tag": "proxy-33",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1019,7 +1107,7 @@
       }
     },
     {
-      "tag": "proxy-30",
+      "tag": "proxy-34",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -1075,7 +1163,7 @@
       }
     },
     {
-      "tag": "proxy-31",
+      "tag": "proxy-35",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -1104,7 +1192,7 @@
       }
     },
     {
-      "tag": "proxy-32",
+      "tag": "proxy-36",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1142,7 +1230,7 @@
       }
     },
     {
-      "tag": "proxy-33",
+      "tag": "proxy-37",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1187,7 +1275,7 @@
       }
     },
     {
-      "tag": "proxy-34",
+      "tag": "proxy-38",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1232,7 +1320,7 @@
       }
     },
     {
-      "tag": "proxy-35",
+      "tag": "proxy-39",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1262,7 +1350,7 @@
       }
     },
     {
-      "tag": "proxy-36",
+      "tag": "proxy-40",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1304,7 +1392,7 @@
       }
     },
     {
-      "tag": "proxy-37",
+      "tag": "proxy-41",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1340,7 +1428,7 @@
       }
     },
     {
-      "tag": "proxy-38",
+      "tag": "proxy-42",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1385,7 +1473,7 @@
       }
     },
     {
-      "tag": "proxy-39",
+      "tag": "proxy-43",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1430,7 +1518,7 @@
       }
     },
     {
-      "tag": "proxy-40",
+      "tag": "proxy-44",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1475,7 +1563,7 @@
       }
     },
     {
-      "tag": "proxy-41",
+      "tag": "proxy-45",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1513,7 +1601,7 @@
       }
     },
     {
-      "tag": "proxy-42",
+      "tag": "proxy-46",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1551,7 +1639,7 @@
       }
     },
     {
-      "tag": "proxy-43",
+      "tag": "proxy-47",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1587,7 +1675,7 @@
       }
     },
     {
-      "tag": "proxy-44",
+      "tag": "proxy-48",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1632,7 +1720,7 @@
       }
     },
     {
-      "tag": "proxy-45",
+      "tag": "proxy-49",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -1657,7 +1745,7 @@
       }
     },
     {
-      "tag": "proxy-46",
+      "tag": "proxy-50",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1702,7 +1790,7 @@
       }
     },
     {
-      "tag": "proxy-47",
+      "tag": "proxy-51",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -1727,7 +1815,7 @@
       }
     },
     {
-      "tag": "proxy-48",
+      "tag": "proxy-52",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1772,7 +1860,7 @@
       }
     },
     {
-      "tag": "proxy-49",
+      "tag": "proxy-53",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1817,7 +1905,7 @@
       }
     },
     {
-      "tag": "proxy-50",
+      "tag": "proxy-54",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -1842,7 +1930,7 @@
       }
     },
     {
-      "tag": "proxy-51",
+      "tag": "proxy-55",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1872,7 +1960,7 @@
       }
     },
     {
-      "tag": "proxy-52",
+      "tag": "proxy-56",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1910,7 +1998,7 @@
       }
     },
     {
-      "tag": "proxy-53",
+      "tag": "proxy-57",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -1935,7 +2023,7 @@
       }
     },
     {
-      "tag": "proxy-54",
+      "tag": "proxy-58",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -1980,7 +2068,7 @@
       }
     },
     {
-      "tag": "proxy-55",
+      "tag": "proxy-59",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2025,7 +2113,7 @@
       }
     },
     {
-      "tag": "proxy-56",
+      "tag": "proxy-60",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2070,7 +2158,7 @@
       }
     },
     {
-      "tag": "proxy-57",
+      "tag": "proxy-61",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2108,7 +2196,7 @@
       }
     },
     {
-      "tag": "proxy-58",
+      "tag": "proxy-62",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2138,7 +2226,7 @@
       }
     },
     {
-      "tag": "proxy-59",
+      "tag": "proxy-63",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2183,7 +2271,7 @@
       }
     },
     {
-      "tag": "proxy-60",
+      "tag": "proxy-64",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2225,7 +2313,7 @@
       }
     },
     {
-      "tag": "proxy-61",
+      "tag": "proxy-65",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -2250,7 +2338,7 @@
       }
     },
     {
-      "tag": "proxy-62",
+      "tag": "proxy-66",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2288,7 +2376,7 @@
       }
     },
     {
-      "tag": "proxy-63",
+      "tag": "proxy-67",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2326,7 +2414,7 @@
       }
     },
     {
-      "tag": "proxy-64",
+      "tag": "proxy-68",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2371,7 +2459,7 @@
       }
     },
     {
-      "tag": "proxy-65",
+      "tag": "proxy-69",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2409,7 +2497,7 @@
       }
     },
     {
-      "tag": "proxy-66",
+      "tag": "proxy-70",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -2434,7 +2522,7 @@
       }
     },
     {
-      "tag": "proxy-67",
+      "tag": "proxy-71",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2479,7 +2567,7 @@
       }
     },
     {
-      "tag": "proxy-68",
+      "tag": "proxy-72",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2524,7 +2612,7 @@
       }
     },
     {
-      "tag": "proxy-69",
+      "tag": "proxy-73",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -2549,7 +2637,7 @@
       }
     },
     {
-      "tag": "proxy-70",
+      "tag": "proxy-74",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2587,7 +2675,7 @@
       }
     },
     {
-      "tag": "proxy-71",
+      "tag": "proxy-75",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -2612,7 +2700,7 @@
       }
     },
     {
-      "tag": "proxy-72",
+      "tag": "proxy-76",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -2637,7 +2725,7 @@
       }
     },
     {
-      "tag": "proxy-73",
+      "tag": "proxy-77",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2675,7 +2763,7 @@
       }
     },
     {
-      "tag": "proxy-74",
+      "tag": "proxy-78",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2721,7 +2809,7 @@
       }
     },
     {
-      "tag": "proxy-75",
+      "tag": "proxy-79",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2759,7 +2847,7 @@
       }
     },
     {
-      "tag": "proxy-76",
+      "tag": "proxy-80",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2797,7 +2885,7 @@
       }
     },
     {
-      "tag": "proxy-77",
+      "tag": "proxy-81",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2843,7 +2931,7 @@
       }
     },
     {
-      "tag": "proxy-78",
+      "tag": "proxy-82",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2888,7 +2976,7 @@
       }
     },
     {
-      "tag": "proxy-79",
+      "tag": "proxy-83",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2934,7 +3022,7 @@
       }
     },
     {
-      "tag": "proxy-80",
+      "tag": "proxy-84",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2980,7 +3068,7 @@
       }
     },
     {
-      "tag": "proxy-81",
+      "tag": "proxy-85",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -3026,7 +3114,7 @@
       }
     },
     {
-      "tag": "proxy-82",
+      "tag": "proxy-86",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -3051,7 +3139,7 @@
       }
     },
     {
-      "tag": "proxy-83",
+      "tag": "proxy-87",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -3089,7 +3177,7 @@
       }
     },
     {
-      "tag": "proxy-84",
+      "tag": "proxy-88",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -3119,7 +3207,7 @@
       }
     },
     {
-      "tag": "proxy-85",
+      "tag": "proxy-89",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -3157,7 +3245,7 @@
       }
     },
     {
-      "tag": "proxy-86",
+      "tag": "proxy-90",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -3186,7 +3274,7 @@
       }
     },
     {
-      "tag": "proxy-87",
+      "tag": "proxy-91",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -3408,7 +3496,11 @@
       "proxy-84",
       "proxy-85",
       "proxy-86",
-      "proxy-87"
+      "proxy-87",
+      "proxy-88",
+      "proxy-89",
+      "proxy-90",
+      "proxy-91"
     ]
   },
   "routing": {
@@ -3501,7 +3593,11 @@
           "proxy-84",
           "proxy-85",
           "proxy-86",
-          "proxy-87"
+          "proxy-87",
+          "proxy-88",
+          "proxy-89",
+          "proxy-90",
+          "proxy-91"
         ],
         "strategy": {
           "type": "leastLoad"
