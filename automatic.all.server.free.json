@@ -48,10 +48,43 @@
         "2a02:6b8::feed:0ff",
         "2a02:6b8:0:1::feed:0ff"
       ],
+      "geoglyph.cloudflare.com": [
+        "172.67.144.31",
+        "104.21.87.153"
+      ],
+      "cumhuriyet.com.tr": [
+        "104.26.10.194",
+        "104.26.11.194",
+        "172.67.73.233"
+      ],
+      "638816432353648698.prague-shledrc-acbs.info": "94.131.9.172",
+      "antimage.fonixapp.org": "109.61.16.89",
       "panel3.ipyar.org": "65.109.188.195"
     },
     "servers": [
-      "1.1.1.1"
+      "1.1.1.1",
+      {
+        "address": "1.1.1.1",
+        "domains": [
+          "domain:googleapis.cn",
+          "domain:gstatic.com"
+        ]
+      },
+      {
+        "address": "223.5.5.5",
+        "domains": [
+          "domain:alidns.com",
+          "domain:doh.pub",
+          "domain:dot.pub",
+          "domain:360.cn",
+          "domain:onedns.net",
+          "geosite:cn"
+        ],
+        "expectIPs": [
+          "geoip:cn"
+        ],
+        "skipFallback": true
+      }
     ]
   },
   "inbounds": [
@@ -96,12 +129,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "79.137.33.139",
-            "port": 16390,
+            "address": "82.25.34.240",
+            "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "170ba974-6ae5-44ae-dfdc-4675b5643f34",
+                "flow": "xtls-rprx-vision",
+                "id": "592e3f3a-fa9d-48fa-bd31-2e8481152e4f",
                 "level": 8
               }
             ]
@@ -110,6 +144,17 @@
       },
       "streamSettings": {
         "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "h2"
+          ],
+          "fingerprint": "chrome",
+          "publicKey": "ckRcueERkPqqjZABwxqni_J_Nbb70Q6k5fEEUAjoImw",
+          "serverName": "cdn.jsdelivr.net",
+          "show": false
+        },
+        "security": "reality",
         "tcpSettings": {
           "header": {
             "type": "none"
@@ -127,12 +172,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "116.203.249.124",
-            "port": 2020,
+            "address": "54.37.205.0",
+            "port": 59332,
             "users": [
               {
                 "encryption": "none",
-                "id": "24a4aa9b-b341-4717-9d4a-00d74c2b84e0",
+                "id": "d2dc2527-33d5-46f3-f39c-36da72fb1a62",
                 "level": 8
               }
             ]
@@ -158,12 +203,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.19.107.253",
-            "port": 2052,
+            "address": "109.61.16.89",
+            "port": 30938,
             "users": [
               {
                 "encryption": "none",
-                "id": "c5e4ad3c-6452-480b-a513-14a03ced385b",
+                "flow": "xtls-rprx-vision",
+                "id": "1068814a-6d43-40d9-a127-0f6b6b77ccfc",
                 "level": 8
               }
             ]
@@ -171,12 +217,20 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "headers": {
-            "Host": "cool-shape-5b609-uebd-reigns.roman-xray-plus-mahdi-reigns-cdn-vip-android-pc-2024-dns-com.workers.dev"
-          },
-          "path": "/aytOnWK9YUh5p5Jo/dHVyay5yYWRpY2FsaXphdGlvbi5pcg==?ed=2560"
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "publicKey": "OkwhFGkP6NhXbmfBpBKqJ_HDNEcqbkp0mMc9HeYVBBE",
+          "serverName": "indeed.com",
+          "shortId": "9f2b1f07",
+          "show": false
+        },
+        "security": "reality",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
         }
       },
       "tag": "proxy-3"
@@ -221,12 +275,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "5.75.206.90",
-            "port": 8440,
+            "address": "geoglyph.cloudflare.com",
+            "port": 2095,
             "users": [
               {
                 "encryption": "none",
-                "id": "b42fc0c6-beff-43ee-9bf7-0f9a4688120b",
+                "id": "👉👉BanV2ray👈👈",
                 "level": 8
               }
             ]
@@ -234,33 +288,15 @@
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "tcpSettings": {
-          "header": {
-            "request": {
-              "headers": {
-                "Connection": [
-                  "keep-alive"
-                ],
-                "Host": [
-                  "telewebion.com"
-                ],
-                "Pragma": "no-cache",
-                "Accept-Encoding": [
-                  "gzip, deflate"
-                ],
-                "User-Agent": [
-                  "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.122 Mobile Safari/537.36"
-                ]
-              },
-              "method": "GET",
-              "path": [
-                "/"
-              ],
-              "version": "1.1"
-            },
-            "type": "http"
-          }
+        "network": "ws",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "chanel-fastt.lavazembaranjon.ir."
+          },
+          "path": "/www.speedtest.net-www.speedtest.net-www.speedtest.net-www.openai.com-www.speedtest.net?ed=3216"
         }
       },
       "tag": "proxy-5"
@@ -274,12 +310,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.25.210.16",
-            "port": 8880,
+            "address": "cumhuriyet.com.tr",
+            "port": 8080,
             "users": [
               {
                 "encryption": "none",
-                "id": "e9979910-79d1-4621-a93c-b2a579c44ba7",
+                "id": "6be4fd18-d9ad-4ea5-d517-da25914b7829",
                 "level": 8
               }
             ]
@@ -288,11 +324,14 @@
       },
       "streamSettings": {
         "network": "ws",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
         "wsSettings": {
           "headers": {
-            "Host": "vngsupply.ip-ddns.com"
+            "Host": "join-to-unlimiteddev.sabadyt.ir"
           },
-          "path": "/TJhZjFeb0fQLVntH"
+          "path": "/@unlimiteddev----@unlimiteddev-----@unlimiteddev----@unlimiteddev----@unlimiteddev----@unlimiteddev----@unlimiteddev----@unlimiteddev----@unlimitedev----@unlimitedev----@unlimiteddev----@unlimiteddev?ed=2480"
         }
       },
       "tag": "proxy-6"
@@ -306,12 +345,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.131.6.87",
-            "port": 8880,
+            "address": "104.21.96.1",
+            "port": 80,
             "users": [
               {
                 "encryption": "none",
-                "id": "e9979910-79d1-4621-a93c-b2a579c44ba7",
+                "id": "2036e2c3-18a5-4eed-9db4-f91a7f02c7d5",
                 "level": 8
               }
             ]
@@ -322,9 +361,9 @@
         "network": "ws",
         "wsSettings": {
           "headers": {
-            "Host": "VngSuPpLY.IP-DdnS.com"
+            "Host": "zoomgov.vipren.biz.id"
           },
-          "path": "/ "
+          "path": "/193.123.81.105=443"
         }
       },
       "tag": "proxy-7"
@@ -338,12 +377,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "172.66.146.201",
-            "port": 2096,
+            "address": "185.231.205.139",
+            "port": 8880,
             "users": [
               {
                 "encryption": "none",
-                "id": "430b0a8f-75db-45f1-b7a7-ebc4d0652a79",
+                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
                 "level": 8
               }
             ]
@@ -351,23 +390,14 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "alpn": [
-            "http/1.1"
-          ],
-          "fingerprint": "randomized",
-          "serverName": "REignScoM.PAGes.deV",
-          "show": false
+        "grpcSettings": {
+          "authority": "",
+          "health_check_timeout": 20,
+          "idle_timeout": 60,
+          "multiMode": false,
+          "serviceName": ""
         },
-        "wsSettings": {
-          "headers": {
-            "Host": "reignscom.pages.dev"
-          },
-          "path": "/KjY9l9Hz0IQoIfm2/MTkzLjEyMy44MS4xMDU=?ed=2560"
-        }
+        "network": "grpc"
       },
       "tag": "proxy-8"
     },
@@ -376,39 +406,28 @@
         "concurrency": -1,
         "enabled": false
       },
-      "protocol": "vless",
+      "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "172.66.43.40",
-            "port": 2083,
+            "address": "45.67.230.79",
+            "port": 11052,
             "users": [
               {
-                "encryption": "none",
-                "id": "64f8ed88-7f27-4fce-94ee-1a9d74a9b439",
-                "level": 8
+                "id": "314185f7-931d-4656-922d-0857e7afd224",
+                "level": 8,
+                "security": "auto"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "alpn": [
-            "http/1.1"
-          ],
-          "fingerprint": "randomized",
-          "serverName": "rrsUPer-PiNe-b97RoMan-wwE.Jam-ESOnd201.WoRKERs.dev",
-          "show": false
-        },
-        "wsSettings": {
-          "headers": {
-            "Host": "rrsuper-pine-b97roman-wwe.jam-esond201.workers.dev"
-          },
-          "path": "/bUyB2BCSlFNVBgYV/MTkyLjIxMC4xNzUuMTg1?ed=2560"
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
         }
       },
       "tag": "proxy-9"
@@ -422,12 +441,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.16.222.98",
-            "port": 8880,
+            "address": "104.18.32.151",
+            "port": 443,
             "users": [
               {
                 "encryption": "none",
-                "id": "e9979910-79d1-4621-a93c-b2a579c44ba7",
+                "id": "b55ec078-3b17-4ed1-a697-71f464cdcaaa",
                 "level": 8
               }
             ]
@@ -436,11 +455,18 @@
       },
       "streamSettings": {
         "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "serverName": "barayeiranmahsang.sabzipolobamahi.dpdns.org",
+          "show": false
+        },
         "wsSettings": {
           "headers": {
-            "Host": "vngsupply.ip-ddns.com"
+            "Host": "barayeiranmahsang.sabzipolobamahi.dpdns.org"
           },
-          "path": "/uLF6HXZ7986oF7Yg?ed"
+          "path": "/?ed=2560"
         }
       },
       "tag": "proxy-10"
@@ -486,6 +512,1018 @@
       "settings": {
         "vnext": [
           {
+            "address": "104.26.7.89",
+            "port": 8443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f5cf098f-5143-440f-a490-7fc24ff27fb0",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "brmahasang.ahaysiahzangi.dpdns.org",
+          "show": false
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "brmahasang.ahaysiahzangi.dpdns.org"
+          },
+          "path": "/VS?ed=2560"
+        }
+      },
+      "tag": "proxy-12"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.191.195",
+            "port": 80,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f278037e-ce36-4634-9b4d-fca93e345a35",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "headers": {
+            "Host": "barayeiran.mahiozonboroon.qzz.io"
+          },
+          "path": "/"
+        }
+      },
+      "tag": "proxy-13"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.231.205.188",
+            "port": 8880,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "grpcSettings": {
+          "authority": "",
+          "health_check_timeout": 20,
+          "idle_timeout": 60,
+          "multiMode": false,
+          "serviceName": ""
+        },
+        "network": "grpc"
+      },
+      "tag": "proxy-14"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.231.205.181",
+            "port": 8880,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "grpcSettings": {
+          "authority": "",
+          "health_check_timeout": 20,
+          "idle_timeout": 60,
+          "multiMode": false,
+          "serviceName": ""
+        },
+        "network": "grpc"
+      },
+      "tag": "proxy-15"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "65.109.217.64",
+            "port": 14070,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "ed7822b0-a358-432e-b794-ae48d0e3ba4e",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "headers": {
+            "Host": ""
+          },
+          "path": "/"
+        }
+      },
+      "tag": "proxy-16"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "85.234.65.120",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "2a562107-43a6-40a4-a35e-e01e6f21684e",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "publicKey": "ng4h6xKU-cqoC_T4U9_wGbYlFqpj9RJbsWVR4AJ_MSo",
+          "serverName": "www.speedtest.net",
+          "shortId": "e2",
+          "show": false
+        },
+        "security": "reality",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-17"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "65.109.198.157",
+            "port": 53627,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "d83c8440-4bd9-4695-aec5-c39b52313e1c",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "headers": {
+            "Host": ""
+          },
+          "path": "/"
+        }
+      },
+      "tag": "proxy-18"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.231.205.5",
+            "port": 8880,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "grpcSettings": {
+          "authority": "",
+          "health_check_timeout": 20,
+          "idle_timeout": 60,
+          "multiMode": false,
+          "serviceName": ""
+        },
+        "network": "grpc"
+      },
+      "tag": "proxy-19"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "94.131.9.172",
+            "port": 8880,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "grpcSettings": {
+          "authority": "",
+          "health_check_timeout": 20,
+          "idle_timeout": 60,
+          "multiMode": false,
+          "serviceName": ""
+        },
+        "network": "grpc"
+      },
+      "tag": "proxy-20"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "15.204.236.64",
+            "port": 24820,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "8dbb26f8-8832-46bc-bc0c-a2f17d8d200f",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-21"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "152.53.142.189",
+            "port": 20558,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "11cb3fc7-f30d-4b42-9ebc-d015f3753403",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "publicKey": "VZ4lK5AZMihPtshVNW2nJtWxD4JO80hhCK2EwY4KqRs",
+          "serverName": "canva.com",
+          "shortId": "03e60665",
+          "show": false
+        },
+        "security": "reality",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-22"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.231.205.246",
+            "port": 8880,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "grpcSettings": {
+          "authority": "",
+          "health_check_timeout": 20,
+          "idle_timeout": 60,
+          "multiMode": false,
+          "serviceName": ""
+        },
+        "network": "grpc"
+      },
+      "tag": "proxy-23"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "94.237.27.223",
+            "port": 33115,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "dae81384-bbf5-4134-bcd4-110ce819fd9d",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "publicKey": "53Q1y0Vmf2zaGBBlcO1NyKFvQM1TShkJKBCNjlevpns",
+          "serverName": "yelp.com",
+          "shortId": "09cb",
+          "show": false
+        },
+        "security": "reality",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-24"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.231.205.239",
+            "port": 8880,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "grpcSettings": {
+          "authority": "",
+          "health_check_timeout": 20,
+          "idle_timeout": 60,
+          "multiMode": false,
+          "serviceName": ""
+        },
+        "network": "grpc"
+      },
+      "tag": "proxy-25"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "51.222.86.157",
+            "port": 54051,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "d1e720d6-4ac9-4a03-b781-567960161b13",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-26"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "15.204.235.13",
+            "port": 43728,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "1b18b439-5371-4f38-b8d0-71aad09a3a92",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-27"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "638816432353648698.prague-shledrc-acbs.info",
+            "port": 8880,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "grpcSettings": {
+          "authority": "",
+          "health_check_timeout": 20,
+          "idle_timeout": 60,
+          "multiMode": false,
+          "serviceName": ""
+        },
+        "network": "grpc",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        }
+      },
+      "tag": "proxy-28"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "51.222.84.59",
+            "port": 14643,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "a810f77f-1346-4eef-b945-59c21be50f4d",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-29"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "51.222.84.252",
+            "port": 25429,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f64ec975-bed6-4c91-b02b-80e5fdad363b",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-30"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "45.12.143.147",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "2a02cb25-0f58-4b19-a7a6-8c205fdb9042",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "publicKey": "mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg",
+          "serverName": "hls-svod.itunes.apple.com",
+          "shortId": "8453e5fd9af927",
+          "show": false
+        },
+        "security": "reality",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-31"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "85.9.203.125",
+            "port": 36563,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "7edc9161-fa59-45ae-b9e9-80ef4bceb68e",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "publicKey": "tPpkzwOVa4li8CurZc07pnxl8ytBUm9x4b9TBP99h00",
+          "serverName": "expedia.com",
+          "shortId": "c294d6ba98e6a7",
+          "show": false
+        },
+        "security": "reality",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-32"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "antimage.fonixapp.org",
+            "port": 30938,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "1068814a-6d43-40d9-a127-0f6b6b77ccfc",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "publicKey": "OkwhFGkP6NhXbmfBpBKqJ_HDNEcqbkp0mMc9HeYVBBE",
+          "serverName": "indeed.com",
+          "shortId": "9f2b1f07",
+          "show": false
+        },
+        "security": "reality",
+        "sockopt": {
+          "domainStrategy": "UseIPv4v6"
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-33"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "51.222.86.7",
+            "port": 51952,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "3956dd35-4f86-4b48-a1ca-45a3dbe471a0",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-34"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.114.97.1",
+            "port": 8880,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f2594eba-8eac-4ec3-eacf-12f2da396236",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "headers": {
+            "Host": "ww.irAnsheep.Web.tr."
+          },
+          "path": "/telegram,@BINEXTIFY-telegram,@BINEXTIFY-telegram,@BINEXTIFY-telegram,@BINEXTIFY-telegram,@BINEXTIFY-telegram,@BINEXTIFY-telegram,@BINEXTIFY-telegram,@BINEXTIFY-telegram,@BINEXTIFY?ed=2560"
+        }
+      },
+      "tag": "proxy-35"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "79.137.33.139",
+            "port": 16390,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "170ba974-6ae5-44ae-dfdc-4675b5643f34",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-36"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "116.203.249.124",
+            "port": 2020,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "24a4aa9b-b341-4717-9d4a-00d74c2b84e0",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-37"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.19.107.253",
+            "port": 2052,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c5e4ad3c-6452-480b-a513-14a03ced385b",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "headers": {
+            "Host": "cool-shape-5b609-uebd-reigns.roman-xray-plus-mahdi-reigns-cdn-vip-android-pc-2024-dns-com.workers.dev"
+          },
+          "path": "/aytOnWK9YUh5p5Jo/dHVyay5yYWRpY2FsaXphdGlvbi5pcg==?ed=2560"
+        }
+      },
+      "tag": "proxy-38"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.66.146.201",
+            "port": 2096,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "430b0a8f-75db-45f1-b7a7-ebc4d0652a79",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "randomized",
+          "serverName": "REignScoM.PAGes.deV",
+          "show": false
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "reignscom.pages.dev"
+          },
+          "path": "/KjY9l9Hz0IQoIfm2/MTkzLjEyMy44MS4xMDU=?ed=2560"
+        }
+      },
+      "tag": "proxy-39"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.66.43.40",
+            "port": 2083,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "64f8ed88-7f27-4fce-94ee-1a9d74a9b439",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "randomized",
+          "serverName": "rrsUPer-PiNe-b97RoMan-wwE.Jam-ESOnd201.WoRKERs.dev",
+          "show": false
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "rrsuper-pine-b97roman-wwe.jam-esond201.workers.dev"
+          },
+          "path": "/bUyB2BCSlFNVBgYV/MTkyLjIxMC4xNzUuMTg1?ed=2560"
+        }
+      },
+      "tag": "proxy-40"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
             "address": "104.16.191.195",
             "port": 80,
             "users": [
@@ -507,7 +1545,7 @@
           "path": "/vpn"
         }
       },
-      "tag": "proxy-12"
+      "tag": "proxy-41"
     },
     {
       "mux": {
@@ -539,7 +1577,7 @@
           "path": "/"
         }
       },
-      "tag": "proxy-13"
+      "tag": "proxy-42"
     },
     {
       "mux": {
@@ -571,38 +1609,7 @@
           "path": "/Dsgd7a5VjA901Zhf"
         }
       },
-      "tag": "proxy-14"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "54.37.205.0",
-            "port": 59332,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "d2dc2527-33d5-46f3-f39c-36da72fb1a62",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-15"
+      "tag": "proxy-43"
     },
     {
       "mux": {
@@ -644,38 +1651,7 @@
           "path": "/z9oQL5T71Qvd5IXx/dHVyay5yYWRpY2FsaXphdGlvbi5pcg==?ed=2560"
         }
       },
-      "tag": "proxy-16"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "51.222.86.7",
-            "port": 51952,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "3956dd35-4f86-4b48-a1ca-45a3dbe471a0",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-17"
+      "tag": "proxy-44"
     },
     {
       "mux": {
@@ -707,111 +1683,7 @@
           "path": "/k6RyfBVM2X3Jk3Sv/MTguMTcwLjc3LjE0OA==?ed=2560"
         }
       },
-      "tag": "proxy-18"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "172.67.65.158",
-            "port": 8880,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "e9979910-79d1-4621-a93c-b2a579c44ba7",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "headers": {
-            "Host": "VngSuPpLY.IP-DdnS.com"
-          },
-          "path": "/Etb1L6YUdZFZuTOr"
-        }
-      },
-      "tag": "proxy-19"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "94.141.123.233",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "f68c2019-91ee-43b0-803c-e66445f66eba",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": false,
-          "fingerprint": "chrome",
-          "publicKey": "vfmqSXTEjdIOgz43eZTNzBRztAvd1U1dDkSz_mnaSk4",
-          "serverName": "cdnjs.com",
-          "shortId": "fc7a526a7e61ba3b",
-          "show": false
-        },
-        "security": "reality",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-20"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "15.204.236.64",
-            "port": 24820,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "8dbb26f8-8832-46bc-bc0c-a2f17d8d200f",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-21"
+      "tag": "proxy-45"
     },
     {
       "mux": {
@@ -864,71 +1736,7 @@
           }
         }
       },
-      "tag": "proxy-22"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "162.159.244.47",
-            "port": 8880,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "e9979910-79d1-4621-a93c-b2a579c44ba7",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "headers": {
-            "Host": "VngSuPpLY.IP-DdnS.com"
-          },
-          "path": "/1ycR2zb3KeELWRha"
-        }
-      },
-      "tag": "proxy-23"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "104.25.229.227",
-            "port": 8880,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "e9979910-79d1-4621-a93c-b2a579c44ba7",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "headers": {
-            "Host": "vngsupply.ip-ddns.com"
-          },
-          "path": "/"
-        }
-      },
-      "tag": "proxy-24"
+      "tag": "proxy-46"
     },
     {
       "mux": {
@@ -970,40 +1778,7 @@
           "path": "/4c5xTyt38CJFpdTt/MTguMjE2LjU1LjEwMA==?ed=2560"
         }
       },
-      "tag": "proxy-25"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.231.205.239",
-            "port": 8880,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "grpcSettings": {
-          "authority": "",
-          "health_check_timeout": 20,
-          "idle_timeout": 60,
-          "multiMode": false,
-          "serviceName": ""
-        },
-        "network": "grpc"
-      },
-      "tag": "proxy-26"
+      "tag": "proxy-47"
     },
     {
       "mux": {
@@ -1035,40 +1810,7 @@
           "path": "/ijiDwDw8BcM9ieHc"
         }
       },
-      "tag": "proxy-27"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.231.205.139",
-            "port": 8880,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "grpcSettings": {
-          "authority": "",
-          "health_check_timeout": 20,
-          "idle_timeout": 60,
-          "multiMode": false,
-          "serviceName": ""
-        },
-        "network": "grpc"
-      },
-      "tag": "proxy-28"
+      "tag": "proxy-48"
     },
     {
       "mux": {
@@ -1110,7 +1852,7 @@
           "path": "/pAGDRWrTDU5ZrQto/MTQwLjIzOC4yMTIuOTU=?ed=2560"
         }
       },
-      "tag": "proxy-29"
+      "tag": "proxy-49"
     },
     {
       "mux": {
@@ -1142,7 +1884,7 @@
           "path": "/JOKERRVPN_BIA_CHANEL@JOKERRVPN"
         }
       },
-      "tag": "proxy-30"
+      "tag": "proxy-50"
     },
     {
       "mux": {
@@ -1174,7 +1916,7 @@
           "path": "/k6RyfBVM2X3Jk3Sv/MTguMTcwLjc3LjE0OA=="
         }
       },
-      "tag": "proxy-31"
+      "tag": "proxy-51"
     },
     {
       "mux": {
@@ -1206,71 +1948,7 @@
           "path": "/aytOnWK9YUh5p5Jo/dHVyay5yYWRpY2FsaXphdGlvbi5pcg=="
         }
       },
-      "tag": "proxy-32"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "104.21.96.1",
-            "port": 80,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "2036e2c3-18a5-4eed-9db4-f91a7f02c7d5",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "headers": {
-            "Host": "zoomgov.vipren.biz.id"
-          },
-          "path": "/193.123.81.105=443"
-        }
-      },
-      "tag": "proxy-33"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "104.17.10.202",
-            "port": 8880,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "e9979910-79d1-4621-a93c-b2a579c44ba7",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "headers": {
-            "Host": "vngsupply.ip-ddns.com"
-          },
-          "path": "/bvxIncLfTcZ5ZVxa?ed"
-        }
-      },
-      "tag": "proxy-34"
+      "tag": "proxy-52"
     },
     {
       "mux": {
@@ -1302,7 +1980,7 @@
           "path": "/ZZLdTAXFA7uBscHO/MTY4LjEzOC40Ni42Nw==?ed=2560"
         }
       },
-      "tag": "proxy-35"
+      "tag": "proxy-53"
     },
     {
       "mux": {
@@ -1334,7 +2012,7 @@
           "path": "/---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1---proNG1"
         }
       },
-      "tag": "proxy-36"
+      "tag": "proxy-54"
     },
     {
       "mux": {
@@ -1366,7 +2044,7 @@
           "path": "/ZZLdTAXFA7uBscHO/MTY4LjEzOC40Ni42Nw=="
         }
       },
-      "tag": "proxy-37"
+      "tag": "proxy-55"
     },
     {
       "mux": {
@@ -1398,7 +2076,7 @@
           "path": "/a6CsWSrdDQ30IcwA"
         }
       },
-      "tag": "proxy-38"
+      "tag": "proxy-56"
     },
     {
       "mux": {
@@ -1429,40 +2107,7 @@
           }
         }
       },
-      "tag": "proxy-39"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "95.164.45.95",
-            "port": 8880,
-            "users": [
-              {
-                "encryption": "none",
-                "id": "df0680ca-e43c-498d-ed86-8e196eedd012",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "grpcSettings": {
-          "authority": "",
-          "health_check_timeout": 20,
-          "idle_timeout": 60,
-          "multiMode": false,
-          "serviceName": ""
-        },
-        "network": "grpc"
-      },
-      "tag": "proxy-40"
+      "tag": "proxy-57"
     },
     {
       "mux": {
@@ -1494,7 +2139,7 @@
           "path": "/ONjoAeb2qS9mek2X"
         }
       },
-      "tag": "proxy-41"
+      "tag": "proxy-58"
     },
     {
       "mux": {
@@ -1532,7 +2177,7 @@
           "path": "/lRA8hFuFxfmXUsjT/MTkyLjIxMC4xNzUuMTg1?ed=2560"
         }
       },
-      "tag": "proxy-42"
+      "tag": "proxy-59"
     },
     {
       "mux": {
@@ -1563,7 +2208,7 @@
           }
         }
       },
-      "tag": "proxy-43"
+      "tag": "proxy-60"
     },
     {
       "mux": {
@@ -1597,7 +2242,7 @@
           }
         }
       },
-      "tag": "proxy-44"
+      "tag": "proxy-61"
     },
     {
       "mux": {
@@ -1639,7 +2284,7 @@
           "path": "/pUCh4rSY6uqQoqHU/NzIuMTMuMTIyLjEzNw==?ed=2560"
         }
       },
-      "tag": "proxy-45"
+      "tag": "proxy-62"
     },
     {
       "mux": {
@@ -1671,7 +2316,7 @@
           "path": "/Y88RbP7A0lJnt8M6/NTQuMjAwLjI0NC45Mw=="
         }
       },
-      "tag": "proxy-46"
+      "tag": "proxy-63"
     },
     {
       "mux": {
@@ -1713,7 +2358,7 @@
           "path": "/b2qP1ECAEt6n7BQJ/MzQuODguNjMuMTYw?ed=2560"
         }
       },
-      "tag": "proxy-47"
+      "tag": "proxy-64"
     },
     {
       "mux": {
@@ -1755,7 +2400,7 @@
           "path": "/W0Wk2YaC9hDVatT0/MTU5LjY5LjE0LjEzOA==?ed=2560"
         }
       },
-      "tag": "proxy-48"
+      "tag": "proxy-65"
     },
     {
       "mux": {
@@ -1797,7 +2442,7 @@
           "path": "/pAGDRWrTDU5ZrQto/MTQwLjIzOC4yMTIuOTU=?ed=2560"
         }
       },
-      "tag": "proxy-49"
+      "tag": "proxy-66"
     },
     {
       "protocol": "freedom",
@@ -1816,7 +2461,7 @@
       "tag": "block"
     }
   ],
-  "remarks": "آپدیت🌐یکشنبه 12 مرداد🕠22:40",
+  "remarks": "آپدیت🔰سه شنبه 14 مرداد🕠19:06",
   "routing": {
     "balancers": [
       {
@@ -1845,6 +2490,100 @@
         ],
         "outboundTag": "direct",
         "port": "53",
+        "type": "field"
+      },
+      {
+        "balancerTag": "proxy-round",
+        "domain": [
+          "domain:googleapis.cn",
+          "domain:gstatic.com"
+        ],
+        "type": "field"
+      },
+      {
+        "network": "udp",
+        "outboundTag": "block",
+        "port": "443",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "223.5.5.5",
+          "223.6.6.6",
+          "2400:3200::1",
+          "2400:3200:baba::1",
+          "119.29.29.29",
+          "1.12.12.12",
+          "120.53.53.53",
+          "2402:4e00::",
+          "2402:4e00:1::",
+          "180.76.76.76",
+          "2400:da00::6666",
+          "114.114.114.114",
+          "114.114.115.115",
+          "114.114.114.119",
+          "114.114.115.119",
+          "114.114.114.110",
+          "114.114.115.110",
+          "180.184.1.1",
+          "180.184.2.2",
+          "101.226.4.6",
+          "218.30.118.6",
+          "123.125.81.6",
+          "140.207.198.6",
+          "1.2.4.8",
+          "210.2.4.8",
+          "52.80.66.66",
+          "117.50.22.22",
+          "2400:7fc0:849e:200::4",
+          "2404:c2c0:85d8:901::4",
+          "117.50.10.10",
+          "52.80.52.52",
+          "2400:7fc0:849e:200::8",
+          "2404:c2c0:85d8:901::8",
+          "117.50.60.30",
+          "52.80.60.30"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "domain:alidns.com",
+          "domain:doh.pub",
+          "domain:dot.pub",
+          "domain:360.cn",
+          "domain:onedns.net"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:cn"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:cn"
+        ],
+        "outboundTag": "direct",
         "type": "field"
       },
       {
